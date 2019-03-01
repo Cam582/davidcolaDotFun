@@ -2862,6 +2862,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.Arr.Acts.JSONLoad,
 		C3.Plugins.AJAX.Exps.LastData,
+		C3.Plugins.Spritefont2.Acts.MoveToTop,
 		C3.Plugins.System.Exps.rgbex,
 		C3.Plugins.Function.Cnds.CompareParam,
 		C3.Plugins.System.Acts.SubVar,
@@ -2907,6 +2908,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Spritefont2.Cnds.IsVisible,
 		C3.Plugins.Spritefont2.Acts.SetVisible,
 		C3.Plugins.Function.Exps.Call,
+		C3.Plugins.System.Cnds.OnLoadComplete,
+		C3.Plugins.LocalStorage.Acts.CheckItemExists,
 		C3.Plugins.LocalStorage.Acts.GetItem,
 		C3.Plugins.LocalStorage.Cnds.OnItemExists,
 		C3.Plugins.System.Exps.tickcount,
@@ -2914,7 +2917,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Cnds.CompareValue,
 		C3.Plugins.System.Acts.LoadState,
 		C3.Plugins.ValerypopoffJSPlugin.Cnds.CompareFunctionReturnValue,
-		C3.Plugins.LocalStorage.Acts.CheckItemExists,
 		C3.Plugins.System.Cnds.OnLoadFailed,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
 		C3.Behaviors.Tween.Cnds.OnAnyTweensFinished,
@@ -3563,8 +3565,6 @@ const f0 = p._GetNode(0).GetBoundMethod();
 const f1 = p._GetNode(1).GetBoundMethod();
 return () => f0(f1(), 0, 0.01);
 },
-() => "startNotDcola",
-() => 1.14,
 () => "norm",
 () => "pHurt",
 () => -3,
@@ -3572,10 +3572,13 @@ return () => f0(f1(), 0, 0.01);
 () => 0.1,
 () => "luigisave",
 () => "whiteFader",
+() => "startNotDcola",
+() => 1.14,
 () => "luigiSave",
 () => 9.5,
 () => "AI",
 () => "space",
+() => "stopndcola",
 () => "b",
 p => {
 const n0 = p._GetNode(0);
@@ -4156,12 +4159,13 @@ p => {
 const f0 = p._GetNode(0).GetBoundMethod();
 return () => f0("bombCluster", "baddieCluster", "gunCluster");
 },
-() => "luigiMusicNotDcola2",
-() => "ndcIntro",
-() => "ndcLoop",
-() => "loopend2final",
-() => "ndcLoopEnd",
-() => "breakGame",
+() => "luigiMusicNotDcola3",
+() => "ndcola",
+() => "start",
+() => "loop",
+() => "loopend1",
+() => "loopend2",
+() => "stop",
 () => "Inverse",
 () => "bulge",
 p => {
@@ -4185,6 +4189,7 @@ return () => (((v0.GetValue() / 900) * 50) - 60);
 },
 () => 200,
 () => 900,
+() => "breakGame",
 () => 0.001,
 () => "Layer 1",
 () => "DAVIDCOLA         is basically a collection of in jokes that only i get and also really obscure references.\nif you dont get it, thats fine\njust know that you should leave ifyou are offended by bad words or joke's",
@@ -4466,13 +4471,6 @@ return () => (("The " + v0.GetValue()) + " is not moving, but appears to be aliv
 () => "luigiFuncs",
 () => "luigiMusic",
 () => "luigiMusicNotDcola",
-() => "ndcola",
-() => "start",
-() => "loop",
-() => "loopend1",
-() => "loopend2",
-() => "stopndcola",
-() => "stop",
 () => "musicType",
 () => "davidfight1",
 () => "davidfight",
@@ -5190,6 +5188,9 @@ p => {
 const v0 = p._GetNode(0).GetVar();
 return () => (("The " + v0.GetValue()) + " has stopped attacking you to watch your struggles");
 },
+() => "You think you've thought of a way to escape this room for good",
+() => "You tried refreshing the BROWSER WINDOW",
+() => "...But nothing happened???",
 p => {
 const v0 = p._GetNode(0).GetVar();
 return () => (("The " + v0.GetValue()) + " has begun to stop attacking you for a moment to watch your struggles");
