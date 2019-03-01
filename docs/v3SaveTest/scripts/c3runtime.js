@@ -2912,6 +2912,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.tickcount,
 		C3.Plugins.LocalStorage.Cnds.OnItemGet,
 		C3.Plugins.LocalStorage.Cnds.CompareValue,
+		C3.Plugins.System.Acts.LoadState,
 		C3.Plugins.ValerypopoffJSPlugin.Cnds.CompareFunctionReturnValue,
 		C3.Plugins.LocalStorage.Acts.CheckItemExists,
 		C3.Plugins.System.Cnds.OnLoadFailed,
