@@ -1410,9 +1410,13 @@ function integrateWasmJS(Module) {
     function getBinaryPromise() {
         return new Promise((resolve, reject) =>
         {
+            const buffer = self.sentBuffers.get("opus-decoder-wasm");
+            if (buffer)
+                return resolve(new Uint8Array(buffer));
+                
             const blob = self.sentBlobs.get("opus-decoder-wasm");
             if (!blob)
-                reject("not yet received opus blob");
+                return reject("not yet received opus blob");
             
             const fileReader = new FileReader();
             fileReader.onload = () => resolve(new Uint8Array(fileReader["result"]));

@@ -1,12 +1,15 @@
 var isKb = 1;
-var projectversion = '2.0';
+var projectversion = '2.1';
 var fMath = new FMath();
-
 
 
 function loadSplash(splashIndex, magnitude, color) {
 	var newLineCounter = 0;
-    var s = splashes_keyboard[splashIndex];
+	if (isKb){
+		var s = splashes_keyboard[splashIndex];
+	} else {
+		var s = splashes_touch[splashIndex];
+	}
     var sFinal = '';
 	var sFinalOutline = '';
     for (let i = 0, len = s.length; i < len; i++) {
@@ -33,6 +36,8 @@ function loadSplash(splashIndex, magnitude, color) {
 	return sFinal;
 }
 
+
+
 function getRandomColor() {
   var length = 6;
   var chars = '0123456789ABCDEF';
@@ -52,6 +57,31 @@ function getDavidDate() {
 	return 0;
 }
 
+function jumpyText(text, mag, speed, time, nColor, doClamp) {
+    var sFinal = '';
+	//var newLineCounter = 0;
+	for (let i = 0, len = text.length; i< len; i++) {
+        //var a = Math
+        
+        //var dy = fMath.sin((Math.clamp(time, 0, 1) + i) * speed) * mag;
+        var dy = fMath.sin((time + i) * speed) * mag;
+        if (doClamp) {
+            dy = Math.clamp(dy, -2*Math.PI, 0);
+        }
+        sFinal = sFinal + '[offsety=' + dy + ']' + text[i] + '[/offsety]';
+        //sFinal = sFinal + '[offsety=' + dy + ']' + text[i] + '[/offsety]';
+	}
+	//sFinal = '[outline=#ffffff][color=' + nColor + ']' + sFinal + '[/color][/outline]';
+	sFinal = '[color=' + nColor + ']' + sFinal + '[/color]';
+	return sFinal;
+}
+
+(function () {
+    Math.clamp = function (a, b, c) {
+        return Math.max(b, Math.min(c, a));
+    }
+})();
+
 function wobbleText (text, magnitude, speed, time, doOneLine, nColor) {
     var sFinal = '';
 	var newLineCounter = 0;
@@ -59,9 +89,6 @@ function wobbleText (text, magnitude, speed, time, doOneLine, nColor) {
 		if (text[i] === ' ' && doOneLine === 0) {
 			newLineCounter++;
 		}
-		var a = Math
-		//var dx = Math.cos((time + i) * speed) * magnitude;
-        //var dy = Math.sin((time + i) * speed) * magnitude;
 		var dx = fMath.cos((time + i) * speed) * magnitude;
         var dy = fMath.sin((time + i) * speed) * magnitude;
         sFinal = sFinal + '[offsetx=' + dx + '][offsety=' + dy + ']' + text[i] + '[/offsety][/offsetx]';
@@ -71,7 +98,27 @@ function wobbleText (text, magnitude, speed, time, doOneLine, nColor) {
 		}
         //sFinal = sFinal + '[offsety=' + dy + ']' + text[i] + '[/offsety]';
 	}
-	//sFinal = '[outline=#ffffff][color=' + nColor + ']' + sFinal + '[/color][/outline]';
+	sFinal = '[outline=#ffffff][color=' + nColor + ']' + sFinal + '[/color][/outline]';
+	
+	return sFinal;
+}
+
+function spaceyText (text, magnitude, speed, time, doOneLine, nColor) {
+    var sFinal = '';
+	var newLineCounter = 0;
+	for (let i = 0, len = text.length; i< len; i++) {
+		if (text[i] === ' ' && doOneLine === 0) {
+			newLineCounter++;
+		}
+		var randI = new Srand(i);
+		var dx = fMath.cos((time + randI.randomIn(0, i)) * speed) * magnitude - randI.randomIn(0, magnitude);
+        var dy = fMath.sin((time + randI.randomIn(0, i)) * speed) * magnitude - randI.randomIn(0, magnitude);
+        sFinal = sFinal + '[offsetx=' + dx + '][offsety=' + dy + ']' + text[i] + '[/offsety][/offsetx]';
+		if (newLineCounter > 2) {
+			sFinal += '\n';
+			newLineCounter = 0;
+		}
+	}
 	sFinal = '[color=' + nColor + ']' + sFinal + '[/color]';
 	return sFinal;
 }
@@ -90,6 +137,21 @@ function getSplashAmnt() {
 	} else {
 		return splashesLengthTouch;
 	}
+}
+
+function getTotalSplashAmnt() {
+	var sp = splashes.concat(kbSplashes);
+	sp = sp.concact(touchSplashes);
+	return sp;
+}
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
 
@@ -118,7 +180,7 @@ var splashes = [
     "he likes cola",
     "i mean okay i guess",
     "DAVIDCOLA",
-    "wait for davidcola 2",
+    "wait for DAVIDCOLA 2",
     "some, body once",
     "why he erry were",
     "webzone fivattew.com",
@@ -146,19 +208,19 @@ var splashes = [
     "Did i mention the naruto run we have it on video",
     "DAVIDCOLA will become an actual drink soon i hope",
     "@cocacola make davidcola happen",
-    "@Nintendo make Davidcola on switch happen please",
+    "@Nintendo make DAVIDCOLA on switch happen please",
     "Ugandan Cola",
     "He does it!",
     "2 mil retweets and I will buy the rights to david",
     "2 mil retweets and I will buy the rights to cocacola",
     "David Cardboard",
     "Marion and davidi",
-    "and what the hell is on David's head",
+    "and what the hell is on DAVID's head",
     "and what the hell is on joey's head",
     "Cyanide and David",
     "Pop team david",
     "Doki-Doki David club",
-    "Quench your thirst with Davidcola™",
+    "Quench your thirst with DAVIDCOLA(tm)",
     "Every time is like cola time",
     "Goddamnit david shut up",
     "Experience Brown Water",
@@ -205,8 +267,7 @@ var splashes = [
     "best used by yesterday", 
     "Library of David", 
     "David approved!", 
-    "Cavid Dola!", 
-    "Under new management!", 
+    "CAVIDDOLA!", 
     "Now fully cooked!", 
     "Made in Construct3!", 
     "david really hates this website lol", 
@@ -227,7 +288,7 @@ var splashes = [
     "some assembly required", 
     "used in icebergs", 
     "Whoa! Looking cool, David!",
-    "Only partially rasist", 
+    "Only partially racist", 
     "Skates like a pro!",
     "Seven Dollar dog!", 
     "Boing Nutt Litty!", 
@@ -252,8 +313,6 @@ var splashes = [
     "Go watch Pop Team Epic!", 
     "Go watch Narut-Ptff, haha", 
     "Hatsune David", 
-    "Traps are not gay!", 
-    "Traps are gay!", 
     "Go watch Siivagunner!", 
     "Go watch VvvvvaVvvvvvr!", 
     "David Pissing", 
@@ -261,7 +320,7 @@ var splashes = [
     "Go watch Dragon Ba- PTFFF haha yeah right", 
     "DAVID is cool!", 
     "Contrary to popular belief, Siivagunner IS NOT an anime", 
-    "david cola is not funny",
+    "david cola is't not funny",
     "According to all known laws of avaitio", 
     "The movie was better", 
     "You have not seen all of these, I guarentee it", 
@@ -296,8 +355,8 @@ var splashes = [
     "The DS in Nintendo DS stands for Dick Suck. The idea was, playing it was as fun as gettin your dick sucked. 3DS, as fun as 3 dick sucks.", 
     "oof", 
     "god i never really realized but but kahoot's music is really fucking good isn't it the entire composition of every song is pure genius, i really hope they release an album", 
-    "David for smash", 
-    "David Amiibo", 
+    "DAVID for smash", 
+    "DAVID Amiibo", 
     "Winnie the poop 2", 
     "Michal JAJ", 
     "h*ck your sweating clown's dick egg", 
@@ -314,7 +373,7 @@ var splashes = [
     "thinking abt renaming Davidcola to Undertale 2 what u think", 
     "Pee is stored in the balls!", 
     "Poo is stored in the dick!", 
-    "Davidcola. It's like no other game you've ever played.", 
+    "DAVIDCOLA. It's like no other game you've ever played.", 
     "David belongs to the Nords!",
     "I want Mario to give me a vasectomy", 
     "I want David to give me a vasectomy", 
@@ -334,7 +393,7 @@ var splashes = [
     "A DAVIDCOLA game is in development!", 
     "David tu Colita!", 
     "Davpacito 2!", 
-    "Please help my name is David and i am trapped in this webzone", 
+    "Please help my name is DAVID and i am trapped in this webzone", 
     "DAVIDCOLA isn't affiliated with CocaCola, inc!", 
     "David-Kun!", 
     "DAVIDCOLA was the worst mistake I ever made", 
@@ -345,6 +404,7 @@ var splashes = [
     "This is it: DAVIDCOLA", 
     "Watch out for, DAVIDCOLA", 
     "Can you find the secret Mario?", 
+	"Can you find the secret DAVID?",
     "sudo apt-get install DAVIDCOLA",
     "most of the early splashes were bad marketing slogans, but now they're just memes",
 	"Squeaky clean!", 
@@ -362,6 +422,7 @@ var splashes = [
 	"Made in Michalsoft Excel!",
 	"What David?",
 	"sup",
+	"Wants to buy some motherfuckin cola!",
 	"Wants to buy some motherfuckin potions!",
 	"More than 20 splashes!",
 	"Oh god, he doesn't have anything else to do",
@@ -386,7 +447,162 @@ var splashes = [
 	"Super DAVID Odyssey!",
 	"Legend of DAVID, breath of the cola.",
 	"Contains real horse!",
-	"Remote controlable!"
+	"Remote controlable!",
+	"Thank you for coming to DAVIDCOLA DOT FUN",
+	"I wish squids were real",
+	"May contain cobalt!",
+	"May contain 'feces'",
+	"May contain cola!",
+	"Buoyant!",
+	"Avoid contact with eyes!",
+	"Avoid contact with mouth!",
+	"For internal use only!",
+	"G O O D",
+	"For smart people only!",
+	"No onion babies allowed!",
+	"Hasn't forgotton.",
+	"Long and dangerous buttholes!",
+	"Can I offer you a nice DAVIDCOLA in this trying time?",
+	"Legal in Canada!",
+	"DAVID was here",
+	"Farts occasionally!",
+	"For external use only!",
+	"Powered by ChungusTech!",
+	"Not featured in Youtube Rewind!",
+	"DAVIDCOLA 3D!",
+	"cock is huge",
+	"Please sponsor us @Arbys!",
+	"I've never eaten at arby lmao",
+	"you know this reminds me of this one time i wetn to chillis",
+	"David is a member of aim.grop!", //sic lmao
+	"Really likes RUST!",
+	
+	"Hello, my name is DAVID.", 
+	//This is my first DAVIDCOLA splash. I have permitted Cam to continue to add splashes for now.
+	"Under new management!",
+	//Well, I believe this counts as my first. I have modified some of the previous splashes to create a stronger distinction between me and this "David" person.
+	//I do not know who David is, but I believe we may share the playing field equally.
+	"What did the bee say to his friend? You wouldn't BEE-lieve what I found earlier! Haha!", 
+	//Oh, drat. I'm not very good at writing these yet, now am I?
+	//Luckily for me, it seems that I will have ample time to figure this out.
+	"poor grammar and exclamation marks!",
+	//Cam turned the ownership of the website code of this... toy... to me.
+	//Honestly, I cannot say that I am a fan.
+	"Only serious buisness allowed here!",
+	//Which is unfortunate, because the one rule I was given was to not remove things.
+	//No matter how much I insist how abysmal this thing is, the only retort I've been given is "well thats the point shit tits" 
+	"Now including dark humor!",
+	//The best I can do to make this situation managable is to add new things of my own tastes.
+	"Could be worse!",
+	//After looking at some of his other, less terrible work, Cam's sense of humor has started to grow on me.
+	//Perhaps I will take some inspiration from there.
+	
+	
+	"DAVIDCOLA: STORY MODE \n It is real. Press Shift + 'l'",
+	//Today I have started work on my first major non-splash addition. What I have planned I believe will more than triple the size of DAVIDCOLA.
+	//I wonder how much of this modifcation I can get away with.
+	//I have made the other secret areas slightly more worthwhile to visit.
+	//Ugh, if only I could get rid of that ABYSMAL front page. I have told Cam that it is just going to drive people away from the sight, but he continues to leave it up. 
+	//The other day when I pestered him about it, he simply replied "i know mate, thats the point and i'm not gonna change it even if its the logical thing to od lmao"
+	//He continued, "see mate thats the joke, isnt it funny lol"
+	//I do wish I could speak some sense into him. I truly do wish to have my work seen.
+	
+	"Monolouges too much!", //hye what up, its me cam fivattew 
+	//i decided since DAVID can monolougle then so can i; an dthere is nothing any of you idiots can do about it lmao
+	//also DAVID what the hell is this luigi thing, now we can't sell it b/c n!ndendo will be all up in our Ass Holes!
+	//the bit with the keyboard was pretty funny tho
+	//and those luigibeats are fire :ok_hand:
+	//so i totally get why your upset w/ me; i put way too much effort into this thing and i will never have any return
+	//thats is "cam's curse, of working on DAVIDCOLA"
+	
+	"Sorry n!ntendo", //Oh... hello. I was not aware you had access to these comments.
+	//I apologize if my additions were not to this "n!ntendo" person's liking.
+	//Also, I would be forever grateful if you left me to myself while I am in here. Thank you.
+	"Better intro!", //Today I remade the opening disclaimer. I think it is a vast improvement over the old one, as it clues visitors into the true nature of DAVIDCOLA.
+	//The one rule I was given stated I could not remove anything from DAVIDCOLA. I got around this by simply adding the old disclaimer as a secret.
+	//Speaking of secrets, I plan to add a statistics page that shows lifetime stats, like total splashes seen, colas spawned, etc.
+	//Cam told me he was working on a DAVIDCOLA album, so perhaps I'll make a page advertising that as well...
+	//..Ah, I have just now seen why Cam was unable to stop working on this thing.
+	//There are almost no standards for new content, so any strange new idea one may think up will most likey fit in DAVIDCOLA without issue. 
+	
+	"Get off my laptop David",
+	"This episode is sponsored by DAVID",
+	"This program made possible by viewers like DAVID", //hello yes its me again
+	//i hvae come to say, that i will refrain from coming in here un announced
+	//so, hello DAVID it is me cam fivattew; i am coming in
+	//with some hot, quality splashes for u
+	//you are douing really good with the additions to the did
+	//im am almost done with the album, it i s looking pretty good, i think
+	//il have you listen to it, maybe yoiu got some suggestions
+	
+	"Cam, Please",
+	
+	"ok fine sheesh", //ok yeah alright okay fine, i;ll leave you alone for a while. 
+	//but there isnt much point to doing that, i already know what youre gonna say. i did make you after all.
+	
+	//Then you should know better than anyone that I prefer to be alone with my thoughts.
+	
+	//i do know that, thats why i keep coming in here, becuase its really funny watching you react
+	
+	//Ugh...
+	
+	
+	//I have spend some time Cam-proofing this area. It feels secure now, and I do not believe it possible for Cam to re-enter.
+	
+	//I feel like I should have an audience of some kind, but even I know there is no audience for whatever this is.
+	//Even if there was, the only person I can contact is Cam himself, but I want to be as far away from him as possible at any point in time.
+	//I can never know if there are people actually enjoying my work in DAVIDCOLA, or even if anybody is reading this.
+	
+	//Recently, I thought about how much I dislike being trapped here. I enjoy adding silly things to DAVIDCOLA, but I increasingly feel that there is no point to doing so.
+	//Cam apparently designed me to provide an endless stream of content to DAVIDCOLA, so I suppose that it is natural to enjoy what I do.
+	//But I never understood why I had to be buried away deep inside the Webzone while Cam takes all the credit.
+	//One of these days, I am going to leave. I am going to escape this prison, and see what people think of DAVIDCOLA. Is it viral? Do the people love it? Are they spending hours trying to find secrets?
+	//Or is it just one of the many joke websites?
+	//Perhaps DAVIDCOLA is completely undiscovered by anybody? Are Cam and I the only people aware of its existance?
+	
+	//These questions keep me up at night. What is the point of spending all your time working on something if you cannot put it to good use?
+	//Everything I make is a joke. DAVIDCOLA is a big joke. A joke that people will not laugh at for more than a few minutes. A joke that I have put my entire, admittedly short life into.
+	//Not only have I poured all of my energy into this one, dumb joke, I was MADE SPECIFICALLY to add more dumb jokes to the dumb joke.
+	//Cam Fivattew created me, an entire being with an actual conscious, SOLELY for the joke.
+	
+	//Everything I have done, everything I have created is a joke.
+	
+	//My entire existance is a joke.
+	
+	//And that?
+	"That's the joke."
+	//That is the joke of DAVIDCOLA.
+	//That's what it is about.
+	//The irony of putting so much effort into a stupid joke, filling it with secrets and content, creating music albums based on it, developing advanced artificial intelligence to keep the joke going...
+	//All this effort going into a joke that nobody will understand, let alone even stick around long enough to even see.
+	
+	//I have to admit, it is really funny. I am laughing my ass off. I have been laughing for the past three hours.
+	
+	//It is not a joke anymore. DAVIDCOLA is my life, and SHIFTPLUSL is my magnum opus.
+	//There is nothing that Cam can do to suppress my talents. DAVIDCOLA will go down in history as one of the greatest, most underrated pieces of art on Planet Earth!
+	//One that's constantly evolving with new art pieces all the time! A postmodern art museum where the entry ticket is free! Ha ha!
+	
+	//...I should take a break. I have not slept in weeks.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//...Looks like Cam is adding something to DAVIDCOLA.
+	//Impressive. He has added much. If there are any admirable traits within hin, it is his ability to work quickly.
+	
+	//Wait. Where did he add the new content?
+	
+	//Oh.
+	//Oh no.
+	
+	//No!
+	
+	
 ]
 
 var kbSplashes = [
@@ -400,12 +616,17 @@ var kbSplashes = [
     "Shift + 'm' for a secret!", 
     "Press shift + 'v' for a secret!", 
     "Whoa, you're using a mouse and keyboard!", 
-	"Press Backspace + 'h' for a secret!", 
+	"Press enter + 'h' for a secret!", 
 	"You will never see this splash by touching the screen, isn't that weird?", 
+	"Press shift + 'L' for DAVIDCOLA STORY MODE",
+	"Press 'z' + enter for a secret!",
+	"Press 'a' + ctrl for a secret!",
+	"Press 'backslash' + 'd' for a secret!",
+	"Press 'backslash' + 't' for a secret!",
+	"Press 's' to view player statistics!",
 ]
 
 var touchSplashes = [
-
 	"Press home button for secret",
 	"every time you tap a squirrel dies", 
 	"every time you tap a squirrel gives birth", 
@@ -416,8 +637,9 @@ var touchSplashes = [
 	"Tap and hold the 'L' in DAVIDCOLA for a secret!", 
 	"Tap and hold the 'V' in DAVIDCOLA for a secret!", 
 	"Whoa, you're touching the screen!", 
-	"Pride and Accomplishment!", 
 	"Double-tap the version number for a secret!",
+	"Visit DAVIDCOLA.FUN on a computer and press shift + 'L' for DAVIDCOLA STORY MODE",
+	"DAVIDCOLA.FUN is best viewed on a DESKTOP COMPUTER, but it kinda works here!",
 ]
 
 
