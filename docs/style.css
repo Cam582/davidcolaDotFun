@@ -32,6 +32,11 @@ html, body, canvas {
 	font-size: 1.2em;
 }
 
+#notSupportedMessage em {
+	color: #888;
+}
+
+
 @font-face {
 	font-family: 'suplexmentary_comic_nc-webfont';
 	src: url('fonts/suplexmentary_comic_nc-webfont.woff') format('woff'), url('fonts/suplexmentary_comic_nc-webfont.woff2') format('woff2'), url('fonts/suplexmentary_comic_nc-webfont.ttf') format('truetype');
