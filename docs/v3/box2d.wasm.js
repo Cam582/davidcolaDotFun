@@ -575,6 +575,3 @@ Gd();b.b2Manifold.e_faceA=Fj();b.b2Manifold.e_faceB=Gj();b.b2_staticBody=km();b.
 
   return Box2D;
 };
-if (typeof module === "object" && module.exports) {
-  module['exports'] = Box2D;
-};
