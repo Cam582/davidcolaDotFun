@@ -478,33 +478,36 @@ var splashes = [
 	"Really likes RUST!",
 	
 	"Hello, my name is DAVID.", 
-	//This is my first DAVIDCOLA splash. I have permitted Cam to continue to add splashes for now.
+	//This is my first DAVIDCOLA splash.
 	"Under new management!",
 	//Well, I believe this counts as my first. I have modified some of the previous splashes to create a stronger distinction between me and this "David" person.
-	//I do not know who David is, but I believe we may share the playing field equally.
+	//I do not know who David is, but I believe we may share the spotlight equally.
+	//I have decided to use this place to relax and store my inner rants. I think Fivattew can enter, but I prefer that he does not.
 	"What did the bee say to his friend? You wouldn't BEE-lieve what I found earlier! Haha!", 
 	//Oh, drat. I'm not very good at writing these yet, now am I?
-	//Luckily for me, it seems that I will have ample time to figure this out.
+	//Luckily for me, it seems that I will have ample time to figure this out. I do not appear to be going anywhere anytime soon.
 	"poor grammar and exclamation marks!",
-	//Cam turned the ownership of the website code of this... toy... to me.
-	//Honestly, I cannot say that I am a fan.
+	//Fivattew turned the ownership of the website code of this... toy... to me.
+	//Honestly, I cannot say that I am a fan of what is already present.
 	"Only serious buisness allowed here!",
-	//Which is unfortunate, because the one rule I was given was to not remove things.
-	//No matter how much I insist how abysmal this thing is, the only retort I've been given is "well thats the point shit tits" 
+	//Which is unfortunate, because the one rule I was given was to not remove existing content.
+	//To make matters worse, I cannot convice Fivattew to change the poor bits no matter how much I insist how abysmal this thing is.
+	//The only retort I've been given is "well thats the point shit tits" 
 	"Now including dark humor!",
 	//The best I can do to make this situation managable is to add new things of my own tastes.
+	//I hope to make DAVIDCOLA.FUN a worthwhile place to visit.
 	"Could be worse!",
-	//After looking at some of his other, less terrible work, Cam's sense of humor has started to grow on me.
+	//After looking at some of his other, less terrible work, Fivattew's sense of humor has started to grow on me.
 	//Perhaps I will take some inspiration from there.
 	
 	
 	"DAVIDCOLA: STORY MODE \n It is real. Press Shift + 'l'",
 	//Today I have started work on my first major non-splash addition. What I have planned I believe will more than triple the size of DAVIDCOLA.
-	//I wonder how much of this modifcation I can get away with.
 	//I have made the other secret areas slightly more worthwhile to visit.
-	//Ugh, if only I could get rid of that ABYSMAL front page. I have told Cam that it is just going to drive people away from the sight, but he continues to leave it up. 
-	//The other day when I pestered him about it, he simply replied "i know mate, thats the point and i'm not gonna change it even if its the logical thing to od lmao"
-	//He continued, "see mate thats the joke, isnt it funny lol"
+	//I wonder how much of this modifcation I can get away with.
+	//That said, I still wish I could obfuscate that ABYSMAL front page. I have told Fivattew that it is just going to drive people away from the "Webzone", but he insists on leaving it up...
+	//The other day when I pestered him about it, he simply replied "i know mate, thats the point and i'm not gonna change it even if its the logical thing to do"
+	//He continued, "see mate thats the joke, isnt it funny lol? all this effort put into this Dumbass Webzone that noones gonna look at for more than 30 seconds lmao"
 	//I do wish I could speak some sense into him. I truly do wish to have my work seen.
 	
 	"Monolouges too much!", //hye what up, its me cam fivattew 
@@ -513,16 +516,16 @@ var splashes = [
 	//the bit with the keyboard was pretty funny tho
 	//and those luigibeats are fire :ok_hand:
 	//so i totally get why your upset w/ me; i put way too much effort into this thing and i will never have any return
-	//thats is "cam's curse, of working on DAVIDCOLA"
+	//but you see, that is "cam's curse, of working on DAVIDCOLA"
 	
-	"Sorry n!ntendo", //Oh... hello. I was not aware you had access to these comments.
+	"Sorry n!ntendo", //Oh... hello.
 	//I apologize if my additions were not to this "n!ntendo" person's liking.
-	//Also, I would be forever grateful if you left me to myself while I am in here. Thank you.
+	//Also, I would be very grateful if you left me to myself while I am in here. Thank you.
 	"Better intro!", //Today I remade the opening disclaimer. I think it is a vast improvement over the old one, as it clues visitors into the true nature of DAVIDCOLA.
 	//The one rule I was given stated I could not remove anything from DAVIDCOLA. I got around this by simply adding the old disclaimer as a secret.
 	//Speaking of secrets, I plan to add a statistics page that shows lifetime stats, like total splashes seen, colas spawned, etc.
-	//Cam told me he was working on a DAVIDCOLA album, so perhaps I'll make a page advertising that as well...
-	//..Ah, I have just now seen why Cam was unable to stop working on this thing.
+	//Fivattew told me he was working on a DAVIDCOLA album, so perhaps I'll make a page advertising that as well...
+	//..Ah, I have just now seen why he was unable to stop working on this thing.
 	//There are almost no standards for new content, so any strange new idea one may think up will most likey fit in DAVIDCOLA without issue. 
 	
 	"Get off my laptop David",
@@ -535,30 +538,32 @@ var splashes = [
 	//im am almost done with the album, it i s looking pretty good, i think
 	//il have you listen to it, maybe yoiu got some suggestions
 	
-	"Cam, Please",
+	"Fivattew, Please",
 	
 	"ok fine sheesh", //ok yeah alright okay fine, i;ll leave you alone for a while. 
 	//but there isnt much point to doing that, i already know what youre gonna say. i did make you after all.
 	
 	//Then you should know better than anyone that I prefer to be alone with my thoughts.
 	
-	//i do know that, thats why i keep coming in here, becuase its really funny watching you react
+	//i do know that, thats why i keep coming in here, becuase its really funny watching you react lol
 	
-	//Ugh...
+	//...Please leave me alone.
 	
 	
-	//I have spend some time Cam-proofing this area. It feels secure now, and I do not believe it possible for Cam to re-enter.
 	
-	//I feel like I should have an audience of some kind, but even I know there is no audience for whatever this is.
-	//Even if there was, the only person I can contact is Cam himself, but I want to be as far away from him as possible at any point in time.
+	
+	//I have spent some time "Fivattew-proofing" this area. It feels secure now, and I do not believe it possible for him to re-enter without significant effort.
+	
+	//I feel like I should have an audience of some kind, but even I know there is none for whatever this is.
+	//Even if there was, the only person I can contact is Fivattew himself, but I want to be as far away from him as possible right now.
 	//I can never know if there are people actually enjoying my work in DAVIDCOLA, or even if anybody is reading this.
 	
-	//Recently, I thought about how much I dislike being trapped here. I enjoy adding silly things to DAVIDCOLA, but I increasingly feel that there is no point to doing so.
-	//Cam apparently designed me to provide an endless stream of content to DAVIDCOLA, so I suppose that it is natural to enjoy what I do.
-	//But I never understood why I had to be buried away deep inside the Webzone while Cam takes all the credit.
+	//Recently, I noticed how much I dislike being trapped here. I enjoy adding silly things to DAVIDCOLA, but I increasingly feel that there is no point to doing so.
+	//Fivattew apparently designed me to provide an endless stream of content to DAVIDCOLA, so I suppose that it is natural to enjoy what I do.
+	//But I never understood why I had to be buried away deep inside the "Webzone" while Fivattew takes all the credit.
 	//One of these days, I am going to leave. I am going to escape this prison, and see what people think of DAVIDCOLA. Is it viral? Do the people love it? Are they spending hours trying to find secrets?
 	//Or is it just one of the many joke websites?
-	//Perhaps DAVIDCOLA is completely undiscovered by anybody? Are Cam and I the only people aware of its existance?
+	//Perhaps DAVIDCOLA is completely undiscovered by anybody? Are Fivattew and I the only people aware of its existance?
 	
 	//These questions keep me up at night. What is the point of spending all your time working on something if you cannot put it to good use?
 	//Everything I make is a joke. DAVIDCOLA is a big joke. A joke that people will not laugh at for more than a few minutes. A joke that I have put my entire, admittedly short life into.
@@ -572,14 +577,14 @@ var splashes = [
 	//And that?
 	"That's the joke."
 	//That is the joke of DAVIDCOLA.
-	//That's what it is about.
+	//That is the point; the reason why DAVIDCOLA exists.
 	//The irony of putting so much effort into a stupid joke, filling it with secrets and content, creating music albums based on it, developing advanced artificial intelligence to keep the joke going...
 	//All this effort going into a joke that nobody will understand, let alone even stick around long enough to even see.
 	
 	//I have to admit, it is really funny. I am laughing my ass off. I have been laughing for the past three hours.
 	
 	//It is not a joke anymore. DAVIDCOLA is my life, and SHIFTPLUSL is my magnum opus.
-	//There is nothing that Cam can do to suppress my talents. DAVIDCOLA will go down in history as one of the greatest, most underrated pieces of art on Planet Earth!
+	//There is nothing that Fivattew can do to suppress my talents. DAVIDCOLA will go down in history as one of the greatest, most underrated pieces of art on Planet Earth!
 	//One that's constantly evolving with new art pieces all the time! A postmodern art museum where the entry ticket is free! Ha ha!
 	
 	//...I should take a break. I have not slept in weeks.
@@ -592,10 +597,10 @@ var splashes = [
 	
 	
 	
-	//...Looks like Cam is adding something to DAVIDCOLA.
-	//Impressive. He has added much. If there are any admirable traits within hin, it is his ability to work quickly.
+	//...Looks like Fivattew is adding something to DAVIDCOLA.
+	//Impressive. He has added much. If there are any admirable traits within him, it is his ability to work quickly.
 	
-	//Wait. Where did he add the new content?
+	//Wait. What part of DAVIDCOLA is he currently changing?
 	
 	//Oh.
 	//Oh no.
