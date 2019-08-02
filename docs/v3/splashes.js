@@ -1,5 +1,5 @@
 var isKb = 1;
-var projectversion = '2.1';
+var projectversion = '3.1.2';
 var fMath = new FMath();
 
 
@@ -11,7 +11,7 @@ function loadSplash(splashIndex, magnitude, color) {
 		var s = splashes_touch[splashIndex];
 	}
     var sFinal = '';
-	var sFinalOutline = '';
+ 	var sFinalOutline = '';
     for (let i = 0, len = s.length; i < len; i++) {
 		if (s[i] === ' ') {
 			newLineCounter++;
@@ -59,7 +59,7 @@ function getDavidDate() {
 
 function jumpyText(text, mag, speed, time, nColor, doClamp) {
     var sFinal = '';
-	//var newLineCounter = 0;
+	var newLineCounter = 0;
 	for (let i = 0, len = text.length; i< len; i++) {
         //var a = Math
         
