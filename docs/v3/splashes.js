@@ -456,9 +456,9 @@ var splashes = [
 	"May contain cola!",
 	"Buoyant!",
 	"Avoid contact with eyes!",
-	"Only for ocular use!"
+	"Only for ocular use!",
 	"Avoid contact with mouth!",
-	"Only for oral use!"
+	"Only for oral use!",
 	"For internal use only!",
 	"For external use only!",
 	"G O O D",
@@ -488,6 +488,8 @@ var splashes = [
 	"DAVID is the CBT wizard!",
 	"#0273FD and #B0FF1E!",
 	"Music made with Renoise!",
+
+	
 	"Hello, my name is DAVID.", 
 	//This is my first DAVIDCOLA splash. I have permitted Cam to continue to add splashes for now.
 	"Under new management!",
