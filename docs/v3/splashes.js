@@ -488,6 +488,7 @@ var splashes = [
 	"DAVID is the CBT wizard!",
 	"#0273FD and #B0FF1E!",
 	"Music made with Renoise!",
+	"Video games are fun. Please try to remember this.",
 
 	
 	"Hello, my name is DAVID.", 
