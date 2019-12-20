@@ -490,6 +490,9 @@ var splashes = [
 	"Music made with Renoise!",
 	"Video games are fun. Please try to remember this.",
 	"are you prepared to face him",
+	"Wow, a cow made of butter.",
+	"Wow, a cow made of DAVID.", 
+	"Hrnnngh... Burger.",
 
 	
 	"Hello, my name is DAVID.", 
