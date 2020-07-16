@@ -493,6 +493,7 @@ var splashes = [
 	"Wow, a cow made of butter.",
 	"Wow, a cow made of DAVID.", 
 	"Hrnnngh... Burger.",
+	"Preserved forever in a vault in the arctic somewhere!",
 
 	
 	"Hello, my name is DAVID.", 
