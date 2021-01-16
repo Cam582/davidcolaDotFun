@@ -1,4 +1,4 @@
-// CAMOS 1: "DAVIDCOLA" by Cam Fivattew
+// CAMOS|1: "DAVIDCOLA" by Cam Fivattew
 
 var isKb = 1;
 var projectversion = '3.1.4';
