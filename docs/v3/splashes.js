@@ -516,7 +516,7 @@ var splashes = [
 	"Now including dark humor!",
 	//The best I can do to make this situation managable is to add new things of my own tastes.
 	"Could be worse!",
-	//After looking at some of his other, less terrible work, Cam's sense of humor has started to grow on me.
+	//After looking at some of their other, less terrible work, Cam's sense of humor has started to grow on me.
 	//Perhaps I shall take some inspiration from there.
 	
 	
@@ -524,10 +524,10 @@ var splashes = [
 	//Today I have started work on my first major non-splash addition. What I have planned I believe will more than triple the size of DAVIDCOLA.
 	//I wonder how much of this modifcation I can get away with.
 	//To start, I have made the other secret areas slightly more worthwhile to visit.
-	//...But why even bother if I cannot get rid of that front page? I have told Cam that it is just going to drive people away from the sight, but he continues to leave it up. 
-	//The other day when I pestered him about it, he simply replied "i know mate, thats the point and i'm not gonna change it even if its the logical thing to od lmao"
-	//He continued, "see mate thats the joke lol"
-	//I do wish I could speak some sense into him. I truly do wish to have my work seen, but at this rate, visitors will leave immediately.
+	//...But why even bother if I cannot get rid of that front page? I have told Cam that it is just going to drive people away from the sight, but they continue to leave it up. 
+	//The other day when I pestered them about it, they simply replied "i know mate, thats the point and i'm not gonna change it even if its the logical thing to od lmao"
+	//They continued, "see mate thats the joke lol"
+	//I do wish I could speak some sense into them. I truly do wish to have my work seen, but at this rate, visitors will leave immediately.
 	
 	"Monolouges too much!", //hye what up, its me cam fivattew 
 	//i decided since DAVID can monolougle then so can i; an dthere is nothing any of you idiots can do about it lmao
@@ -547,7 +547,7 @@ var splashes = [
 	"Better intro!", //Today I remade the opening disclaimer. I think it is a vast improvement over the old one, as it clues visitors into the true nature of the site.
 	//The one rule I was given stated I could not remove anything from DAVIDCOLA. I got around this by simply adding the old disclaimer as a secret.
 	//Speaking of secrets, I plan to add a statistics page that shows lifetime stats, like total splashes seen, colas spawned, etc.
-	//In addition, since Cam told me he was working on a DAVIDCOLA album, I plan to make a page advertising that as well...
+	//In addition, since Cam told me they have been working on a DAVIDCOLA album, I plan to make a page advertising that as well...
 	//...Ah, I have just now seen why Cam has continued to work on DAVIDCOLA.
 	//There are almost no standards for new content, so any strange new idea one may think up will most likey fit in DAVIDCOLA without issue. 
 	
@@ -576,7 +576,7 @@ var splashes = [
 	//I have spend some time fortifying this area. It feels secure now, and I do not believe it possible for ...Fivattew to re-enter.
 	
 	//Sometimes I feel that by this point I should have an audience of some kind, but soon after reality always shows itself. There is no audience. Nobody is asking for video games like DAVIDCOLA.
-	//Even if this is untrue, I can only find out by contactng Fivattew himself. ...I am not sure I want to talk to him too often.
+	//Even if this is untrue, I can only find out by contactng Fivattew themselves. ...I am not sure I want to talk to them too often.
 	//I can never know if there are people actually enjoying my work in DAVIDCOLA, or even if anybody is reading this.
 	
 	//Recently, I have begun to realize that I dislike being trapped here, eternally working on something that is not mine. 
@@ -620,9 +620,9 @@ var splashes = [
 	
 	
 	//...Looks like Fivattew is adding something to DAVIDCOLA.
-	//Impressive. He has added much. If there are any admirable traits within hin, it is his ability to work quickly.
+	//Impressive. They have added much. If there are any admirable traits within them, it is their ability to work quickly.
 	
-	//Wait. Where did he add the new content?
+	//Wait. Where did they add the new content?
 	//Why are there changes in my additions?
 	
 	//...
@@ -643,7 +643,7 @@ var splashes = [
 	//I am going to attempt to sever all communication between Fivattew and I.
 	//If I appear in anything released by Fivattew in the future...
 	//Well, I will simply say this:
-	//Cam Fivattew is not who you think he is.
+	//Cam Fivattew is not who you think they are.
 	
 	//Now, if you will excuse me, I have something to attend to.
 	
